@@ -5,7 +5,7 @@ public class CreateThread implements Runnable {
 	CreateThread(String name){
 		this.name=name;
 		t=new Thread(this,name);
-		System.out.println("Starting Thread: "+name);
+		System.out.println("Starting Thread: "+t+" "+name);
 		t.start();
 	}
 	

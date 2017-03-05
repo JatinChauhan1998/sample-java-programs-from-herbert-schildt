@@ -1,0 +1,58 @@
+2017-01-26 22:35:21,835 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-01-26 23:09:31,091 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-01-26 23:11:57,869 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-01-26 23:14:46,715 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-01-28 10:28:28,772 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-01-28 10:28:31,184 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-01-28 10:38:08,394 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-01-31 03:44:26,558 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-03 15:30:25,632 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-04 22:06:35,224 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-05 10:21:55,300 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-05 12:00:28,270 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-05 12:03:40,747 [Worker-6] ERROR o.e.r.s.GitSnippetRepository - Transport operation failed.
+org.eclipse.jgit.api.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: cannot open git-upload-pack
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:135) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.fetch(GitSnippetRepository.java:198) ~[org.eclipse.recommenders.snipmatch_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.open(GitSnippetRepository.java:91) ~[org.eclipse.recommenders.snipmatch_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.recommenders.internal.snipmatch.rcp.EclipseGitSnippetRepository$2.run(EclipseGitSnippetRepository.java:165) [org.eclipse.recommenders.snipmatch.rcp_2.4.5.v20161130-1427.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+Caused by: org.eclipse.jgit.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: cannot open git-upload-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:551) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:311) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:136) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:122) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1201) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:128) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	... 4 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_121]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_121]
+	at java.io.BufferedInputStream.fill(Unknown Source) ~[na:1.8.0_121]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[na:1.8.0_121]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[na:1.8.0_121]
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source) ~[na:1.8.0_121]
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source) ~[na:1.8.0_121]
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source) ~[na:1.8.0_121]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_121]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_121]
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source) ~[na:1.8.0_121]
+	at org.eclipse.jgit.transport.http.JDKHttpConnection.getResponseCode(JDKHttpConnection.java:98) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:196) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:489) ~[org.eclipse.jgit_4.6.0.201612231935-r.jar:4.6.0.201612231935-r]
+	... 9 common frames omitted
+2017-02-06 15:31:38,236 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-06 15:31:41,631 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-02-07 18:26:25,466 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-07 18:26:33,083 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-02-15 21:49:15,906 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-20 22:10:30,498 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-22 10:09:55,931 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-22 10:10:12,410 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-02-23 23:01:09,273 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-24 14:01:25,215 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-25 15:25:10,968 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-25 15:25:24,890 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-03-01 18:03:58,616 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-03-02 21:10:26,486 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-03-05 18:38:11,577 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

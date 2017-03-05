@@ -1,0 +1,9 @@
+public class Main{
+	public static void main(String[] args) {
+		for(int x=33;x<200;x++){
+			System.out.print("Pos"+x+": ");
+			System.out.write(x);
+			System.out.println();
+		}
+	}
+}
